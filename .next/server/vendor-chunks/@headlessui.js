@@ -549,50 +549,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createStore: () => (/* binding */ a)\n/* harmony export */ });\nfunction a(o, r) {\n    let t = o(), n = new Set;\n    return {\n        getSnapshot () {\n            return t;\n        },\n        subscribe (e) {\n            return n.add(e), ()=>n.delete(e);\n        },\n        dispatch (e, ...s) {\n            let i = r[e].call(t, ...s);\n            i && (t = i, n.forEach((c)=>c()));\n        }\n    };\n}\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9ub2RlX21vZHVsZXMvQGhlYWRsZXNzdWkvcmVhY3QvZGlzdC91dGlscy9zdG9yZS5qcyIsIm1hcHBpbmdzIjoiOzs7O0FBQUEsU0FBU0EsRUFBRUMsQ0FBQyxFQUFDQyxDQUFDO0lBQUUsSUFBSUMsSUFBRUYsS0FBSUcsSUFBRSxJQUFJQztJQUFJLE9BQU07UUFBQ0M7WUFBYyxPQUFPSDtRQUFDO1FBQUVJLFdBQVVDLENBQUM7WUFBRSxPQUFPSixFQUFFSyxHQUFHLENBQUNELElBQUcsSUFBSUosRUFBRU0sTUFBTSxDQUFDRjtRQUFFO1FBQUVHLFVBQVNILENBQUMsRUFBQyxHQUFHSSxDQUFDO1lBQUUsSUFBSUMsSUFBRVgsQ0FBQyxDQUFDTSxFQUFFLENBQUNNLElBQUksQ0FBQ1gsTUFBS1M7WUFBR0MsS0FBSVYsQ0FBQUEsSUFBRVUsR0FBRVQsRUFBRVcsT0FBTyxDQUFDQyxDQUFBQSxJQUFHQSxJQUFHO1FBQUU7SUFBQztBQUFDO0FBQTBCIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcmVzdC1jb3VudHJpZXMtYXBpLXdpdGgtY29sb3ItdGhlbWUtc3dpdGNoZXItbWFzdGVyLy4vbm9kZV9tb2R1bGVzL0BoZWFkbGVzc3VpL3JlYWN0L2Rpc3QvdXRpbHMvc3RvcmUuanM/YTZjYiJdLCJzb3VyY2VzQ29udGVudCI6WyJmdW5jdGlvbiBhKG8scil7bGV0IHQ9bygpLG49bmV3IFNldDtyZXR1cm57Z2V0U25hcHNob3QoKXtyZXR1cm4gdH0sc3Vic2NyaWJlKGUpe3JldHVybiBuLmFkZChlKSwoKT0+bi5kZWxldGUoZSl9LGRpc3BhdGNoKGUsLi4ucyl7bGV0IGk9cltlXS5jYWxsKHQsLi4ucyk7aSYmKHQ9aSxuLmZvckVhY2goYz0+YygpKSl9fX1leHBvcnR7YSBhcyBjcmVhdGVTdG9yZX07XG4iXSwibmFtZXMiOlsiYSIsIm8iLCJyIiwidCIsIm4iLCJTZXQiLCJnZXRTbmFwc2hvdCIsInN1YnNjcmliZSIsImUiLCJhZGQiLCJkZWxldGUiLCJkaXNwYXRjaCIsInMiLCJpIiwiY2FsbCIsImZvckVhY2giLCJjIiwiY3JlYXRlU3RvcmUiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(ssr)/./node_modules/@headlessui/react/dist/utils/store.js\n");
 
-/***/ }),
-
-/***/ "(rsc)/./node_modules/@headlessui/react/dist/components/menu/menu.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@headlessui/react/dist/components/menu/menu.js ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Menu: () => (/* binding */ e0),
-/* harmony export */   MenuButton: () => (/* binding */ e1),
-/* harmony export */   MenuHeading: () => (/* binding */ e2),
-/* harmony export */   MenuItem: () => (/* binding */ e3),
-/* harmony export */   MenuItems: () => (/* binding */ e4),
-/* harmony export */   MenuSection: () => (/* binding */ e5),
-/* harmony export */   MenuSeparator: () => (/* binding */ e6)
-/* harmony export */ });
-/* harmony import */ var next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/dist/build/webpack/loaders/next-flight-loader/module-proxy */ "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js");
-
-const proxy = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Ahmad\OneDrive\Desktop\Machine Coding Practice\rest-countries-api-with-color-theme-switcher-master\node_modules\@headlessui\react\dist\components\menu\menu.js`)
-
-// Accessing the __esModule property and exporting $$typeof are required here.
-// The __esModule getter forces the proxy target to create the default export
-// and the $$typeof value is for rendering logic to determine if the module
-// is a client boundary.
-const { __esModule, $$typeof } = proxy;
-const __default__ = proxy.default;
-
-const e0 = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Ahmad\OneDrive\Desktop\Machine Coding Practice\rest-countries-api-with-color-theme-switcher-master\node_modules\@headlessui\react\dist\components\menu\menu.js#Menu`);
-
-const e1 = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Ahmad\OneDrive\Desktop\Machine Coding Practice\rest-countries-api-with-color-theme-switcher-master\node_modules\@headlessui\react\dist\components\menu\menu.js#MenuButton`);
-
-const e2 = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Ahmad\OneDrive\Desktop\Machine Coding Practice\rest-countries-api-with-color-theme-switcher-master\node_modules\@headlessui\react\dist\components\menu\menu.js#MenuHeading`);
-
-const e3 = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Ahmad\OneDrive\Desktop\Machine Coding Practice\rest-countries-api-with-color-theme-switcher-master\node_modules\@headlessui\react\dist\components\menu\menu.js#MenuItem`);
-
-const e4 = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Ahmad\OneDrive\Desktop\Machine Coding Practice\rest-countries-api-with-color-theme-switcher-master\node_modules\@headlessui\react\dist\components\menu\menu.js#MenuItems`);
-
-const e5 = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Ahmad\OneDrive\Desktop\Machine Coding Practice\rest-countries-api-with-color-theme-switcher-master\node_modules\@headlessui\react\dist\components\menu\menu.js#MenuSection`);
-
-const e6 = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Ahmad\OneDrive\Desktop\Machine Coding Practice\rest-countries-api-with-color-theme-switcher-master\node_modules\@headlessui\react\dist\components\menu\menu.js#MenuSeparator`);
-
-
 /***/ })
 
 };

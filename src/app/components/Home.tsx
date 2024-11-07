@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IoSearch, IoChevronDown } from "react-icons/io5";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import Image from "next/image";
 
 const Home = () => {
+  const [data, setData] = useState([]);
+  const [query, setQuery] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("https://restcountries.com/v3.1/all");
+      const res = await response.json();
+      setData(res);
+    };
+    fetchData();
+  }, []);
+
+  const filterCountries = data.filter(
+    (data: any) =>
+      typeof data.name?.common === "string" &&
+      data.name.common.toLowerCase().includes("india")
+  );
+
+  console.log(filterCountries);
+
   return (
     <div className="px-10">
       <div className="flex justify-between items-center mt-8">
@@ -14,6 +34,7 @@ const Home = () => {
             type="text"
             className="outline-none bg-transparent"
             placeholder="Search for a country..."
+            onChange={(e: any) => setQuery(e.target.value.toLowerCase())}
           />
         </div>
         {/* Dropdown */}
@@ -87,22 +108,37 @@ const Home = () => {
       </div>
       {/* Cards */}
       <div className="grid gap-10 mt-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        {Array(8).fill(null).map((_, index) => (
-            <div key={index} className="rounded-lg drop-shadow-md bg-white cursor-pointer">
+        {data
+          .filter(
+            (data: any) =>
+              typeof data.name?.common === "string" &&
+              data.name.common.toLowerCase().includes(query)
+          )
+          .map((data: any) => (
+            <a
+              className="rounded-lg drop-shadow-md bg-white cursor-pointer"
+              href={`https://restcountries.com/v3.1/name/${data.name.common}`}
+            >
               <Image
-                src="/india.png"
+                src={data.flags.png}
                 width={100}
                 height={100}
                 className="w-full rounded-t-lg"
                 alt="img"
               />
               <div className="p-2">
-                <h2 className="mb-2">India</h2>
-                <p>Population: 5464654646</p>
-                <p>Region: Asia</p>
-                <p>Capital: Delhi</p>
+                <h2 className="mb-2 font-bold text-lg">{data.name.common}</h2>
+                <p className="text-sm">
+                  <b>Population:</b> {data.population}
+                </p>
+                <p className="text-sm">
+                  <b>Region:</b> {data.region}
+                </p>
+                <p className="text-sm">
+                  <b>Capital:</b> {data.capital?.[0]}
+                </p>
               </div>
-            </div>
+            </a>
           ))}
       </div>
     </div>
