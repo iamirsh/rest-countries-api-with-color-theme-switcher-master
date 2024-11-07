@@ -1,11 +1,11 @@
 import Navbar from "./components/Navbar";
+import Home from "./components/Home"
 
-
-export default function Home() {
+export default function App() {
   return (
     <>
     <Navbar />
-    <h1>Rest countries API</h1>
+    <Home />
     </>
   );
 }
