@@ -86,9 +86,9 @@ const Home = () => {
         </Menu>
       </div>
       {/* Cards */}
-      <div className="grid gap-4 mt-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-10 mt-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {Array(8).fill(null).map((_, index) => (
-            <div key={index} className="rounded-lg drop-shadow-md bg-white">
+            <div key={index} className="rounded-lg drop-shadow-md bg-white cursor-pointer">
               <Image
                 src="/india.png"
                 width={100}
