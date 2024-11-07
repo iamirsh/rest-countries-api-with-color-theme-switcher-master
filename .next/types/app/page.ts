@@ -1,4 +1,4 @@
-// File: C:\Users\Ahmad\OneDrive\Desktop\rest-countries-api-with-color-theme-switcher-master\src\app\page.tsx
+// File: C:\Users\Ahmad\OneDrive\Desktop\Machine Coding Practice\rest-countries-api-with-color-theme-switcher-master\src\app\page.tsx
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
